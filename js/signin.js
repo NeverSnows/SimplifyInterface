@@ -25,6 +25,7 @@ const Signin = {
         }
     },
 
+    // Esta funcao ainda é chamada de makeLogin, pois teoricamente ao criar a conta voce ja loga.
     makeLogin(){
         window.open("post-login.html", "_self");
     },
