@@ -116,7 +116,7 @@ const EventListeners = {
         });
     },
 
-    //Deverá ser utulisado apra adicionar event listeners em elementos que surjem e desaparecem com o tempo.
+    //Deverá ser utulisado apra adicionar event listeners em elementos que surgem e desaparecem com o tempo.
     subscribeDynamicEventLisneters(){
 
     }
