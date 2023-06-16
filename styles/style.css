@@ -187,6 +187,11 @@ main{
     color: var(--expenseConfirmFontHVR);
 }
 
+/* Login */
+.justify-right{
+    justify-content: right;
+}
+
 /* Footer */
 footer{
     width: 100%;

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplify</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="light-theme">
+    <header>
+
+    </header>
+    <main>
+        <button class="new-expense-btn" id="new-expense-btn">Novo Gasto +</button>
+        <div class="graphics-container">
+            <div class="graphic"></div>
+            <div class="graphic"></div>
+            <div class="graphic"></div>
+            <div class="graphic"></div>
+        </div>
+    </main>
+    <div class="new-expense-overlay hidden" id="new-expense-overlay">
+        <div class="new-expense-form">
+            <span class="form-title">Nova Despesa</span>
+            <div class="form-row">
+                <label for="new-expense-name" class="form-label">Nome:</label>
+                <input type="text" id="new-expense-name" class="form-field">
+            </div>
+            <div class="form-row">
+                <label for="new-expense-value" class="form-label">Valor:</label>
+                <input type="number" id="new-expense-value" class="form-field">
+            </div>
+            <div class="form-row">
+                <label for="new-expense-date" class="form-label">Data:</label>
+                <input type="date" id="new-expense-date" class="form-field">
+            </div>
+            <div class="form-row">
+                <label for="new-expense-types" class="form-label">Categoria</label>
+                <select name="expense-types" id="new-expense-types" class="form-field">
+                </select>
+            </div>
+            <div class="form-row hidden-sizeless" id="expense-type-name-row">
+                <label for="new-expense-type-name" class="form-label form-label-wider">Nome da Categoria</label>
+                <input type="text" id="new-expense-type-name" class="form-field">                
+            </div>
+            <div class="form-row">
+                <button class="form-button new-expense-cancel" id="new-expense-cancel">Cancelar</button>
+                <button class="form-button new-expense-confirm" id="new-expense-confirm">Confirmar</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+<script src="js/index.js"></script>
+</html>

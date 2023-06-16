@@ -47,6 +47,7 @@ const Form = {
     },
 };
 
+
 //Lida com toda alteração visual no documento.
 const DOM = {
     //Gera uma <option> com a categoria recebida e a retorna.
@@ -80,7 +81,7 @@ const DOM = {
 
 // Lida com Event Listeners.
 const EventListeners = {
-    //Deve ser chaamdo apenas uma vez no começo do programa, para evitar duplicidade de event listeners.
+    //Deve ser chamdo apenas uma vez no começo do programa, para evitar duplicidade de event listeners.
     subscribeFixedEventListeners(){
         document.getElementById('new-expense-types').addEventListener('change', (event)=>{
             const expenseNameElement = document.getElementById('expense-type-name-row');
