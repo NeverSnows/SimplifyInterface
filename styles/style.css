@@ -197,6 +197,25 @@ footer{
     width: 100%;
     height: 3rem;
     background-color: var(--footerBg);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.credits-link{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--modalFont);
+    margin-left: 2rem;
+    transition: all var(--globalTransition);
+}
+
+.credits-link:hover{
+    filter: brightness(1.7);
+}
+
+.credits{
+    color: var(--modalFont);
 }
 
 /* Screen Width adapting*/
