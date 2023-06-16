@@ -50,6 +50,21 @@ header{
     width: 100%;
     height: 5rem;
     background-color: var(--headerBg);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-image{
+    height: 3rem;
+    filter: drop-shadow(2px 2px 0 white);
+    margin-left: 2rem;
+}
+
+.logo-text{
+    margin-left: 1rem;
+    color: var(--expenseConfirmBgHVR);
+    font-size: 2rem;
 }
 
 /* Main */
