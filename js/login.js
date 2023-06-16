@@ -1,13 +1,15 @@
 
 const DataBaseManagement = {
     checkUserInfo(username, password){
-        //acessa o BD e checa se ha um usuario com essa senha e nome. Se sim, deve retornar true, se nao, false.
+        //Acessa o BD e checa se ha um usuario com essa senha e nome. Se sim, deve retornar true, se nao, false.
         return true; //valor temporario.
     }
 };
 
 const Login = {
     validateFields(){
+        username = document.getElementById('login-username').value;
+        password = document.getElementById('login-password').value;
         if(username == '' || password == ''){
             console.log(username, password);
             return false;
@@ -18,7 +20,7 @@ const Login = {
     validateUser(){
         username = document.getElementById('login-username').value;
         password = document.getElementById('login-password').value;
-        if(Login.validateFields() && DataBaseManagement.checkUserInfo(this.username, this.password)){
+        if(Login.validateFields() && DataBaseManagement.checkUserInfo(username, password)){
             Login.makeLogin();
         }
     },
