@@ -6,19 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simplify</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="styles/table.css">
 </head>
 <body class="light-theme">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <header>
-        <img src="assets/images/logo.png" alt="Logo" class="logo-image">
-        <span class="logo-text">Simplify</span>
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="Logo" class="logo-image">
+            <span class="logo-text">Simplify</span>
+        </div>
+        <button class="log-out-btn">Log Out</button>
     </header>
     <main>
         <button class="new-expense-btn" id="new-expense-btn">Novo Gasto +</button>
         <div class="graphics-container">
-            <div class="graphic"></div>
-            <div class="graphic"></div>
-            <div class="graphic"></div>
-            <div class="graphic"></div>
+            <div class="graphic">
+                <p class="graphic-title">Percentual de gastos</p>
+                <!-- Grafico aqui -->
+            </div>
+            <div class="graphic">
+                <p class="graphic-title">Gastos por Categoria</p>
+                <!-- Grafico aqui -->
+            </div>
+            <div class="graphic">
+                <p class="graphic-title">Limite de Gastos</p>
+                <!-- Grafico aqui -->
+                <div class="limmit-container">
+                    <label for="limmit-input" class="limmit-input">Limite:</label>
+                    <input type="text" id="limmit-input" class="form-field">                    
+                </div>
+            </div>
+        </div>
+        <div class="table-container">
+            <table id="expenses-table" class="expenses-table display">
+                <thead>
+                    <tr>
+                        <th>Gasto</th>
+                        <th>Valor</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <!-- Dados da tabela vão aqui -->
+                    <!-- <tr>
+                        <td>Luz da semana passada</td>
+                        <td>R$290.90</td>
+                        <td>Eletricidade</td>
+                    </tr>
+                    <tr>
+                        <td>Gas do mes</td>
+                        <td>R$:150.00</td>
+                        <td>Gas</td>
+                    </tr>
+                    <tr>
+                        <td>Compra mensal</td>
+                        <td>R$:890.00</td>
+                        <td>Mantimentos</td>
+                    </tr> -->
+                </tbody>
+            </table>
         </div>
     </main>
     <div class="new-expense-overlay hidden" id="new-expense-overlay">
@@ -39,6 +87,7 @@
             <div class="form-row">
                 <label for="new-expense-types" class="form-label">Categoria</label>
                 <select name="expense-types" id="new-expense-types" class="form-field">
+                    <!-- Categorias <option> ficam aqui dentro -->
                 </select>
             </div>
             <div class="form-row hidden-sizeless" id="expense-type-name-row">
@@ -54,6 +103,7 @@
     <footer>
         <a href="credits.html" class="credits-link" target="_blank">Criadores</a>
     </footer>
+    <!-- <script src="js/index.js"></script> -->
+    <script src="js/post-login.js"></script>
 </body>
-<script src="js/index.js"></script>
 </html>

@@ -24,11 +24,12 @@ body{
 
 .light-theme{
     --headerBg: #4677d3;
-    --mainBg: #94addd;
+    --mainBg: #c6cedf;
     --footerBg: var(--headerBg);
     --overlayBg: rgba(0, 0, 0, 0.7);;
     --expenseFormBg: #e6e6e6;
     --modalFont: #313131;
+    --creditFont: #c1f3e2;
 
     /* Form buttons */
     --expenseCancelBg: white;
@@ -36,14 +37,14 @@ body{
     --expenseCancelFont: var(--expenseCancelBgHVR);
     --expenseCancelFontHVR: var(--expenseCancelBg);
     --expenseConfirmBg: white;
-    --expenseConfirmBgHVR: rgb(17, 230, 176);
+    --expenseConfirmBgHVR: #11e6b0;
     --expenseConfirmFont: var(--expenseConfirmBgHVR);
     --expenseConfirmFontHVR: var(--expenseConfirmBg);
 }
 
 :root{
-    --globalBorderRadius: 0.5rem;
-    --globalTransition: 0.2s;
+    --globalBorderRadius: 1rem;
+    --globalTransition: 0.3s;
 }
 /* Header */
 header{
@@ -53,6 +54,7 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo-image{
@@ -65,17 +67,26 @@ header{
     margin-left: 1rem;
     color: var(--expenseConfirmBgHVR);
     font-size: 2rem;
+    transition: all var(--globalTransition) ease;
 }
 
+.logo-text:hover{
+    font-size: 2.2rem;
+}
+
+.log-out-btn{
+    background-color: transparent;
+}
 /* Main */
 main{
-    background-color: var(--mainBg);
+    /* background-color: var(--mainBg); */
+    background: rgb(127,166,241);
+    background: linear-gradient(170deg, rgba(127,166,241,1) 0%, rgba(147,227,206,1) 100%);
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .new-expense-btn{
@@ -87,11 +98,11 @@ main{
     border-radius: 1.5rem;
     transition: var(--globalTransition);
     box-sizing: border-box;
+    margin-top: 5rem;
 }
 
 .new-expense-btn:hover{
-    padding: 1.2rem;
-    border-radius: 1.6rem;
+    padding: 1rem 2rem;
     background-color: var(--expenseConfirmBgHVR);
 }
 
@@ -110,8 +121,42 @@ main{
     background-color: var(--expenseFormBg);
     border-radius: var(--globalBorderRadius);
     margin: 1rem;
+    box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
+    transition: all var(--globalTransition) ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.graphic:hover{
+    box-shadow: none;
+}
+
+.graphic-title{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0.5rem;
+}
+
+.limmit-container{
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Table */
+.table-container{
+    padding: 1rem;
+    background-color: var(--expenseFormBg);
+    border-radius: var(--globalBorderRadius);
+    width: 40rem;
+    box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
+    transition: all var(--globalTransition) ease;
+}
+
+.table-container:hover{
+    box-shadow: none;
+}
 /* Modal */
 .new-expense-overlay{
     background-color: var(--overlayBg);
@@ -231,7 +276,7 @@ footer{
 .credits-link{
     text-decoration: none;
     font-size: 1.1rem;
-    color: var(--modalFont);
+    color: var(--creditFont);
     margin-left: 2rem;
     transition: all var(--globalTransition);
 }
@@ -241,6 +286,10 @@ footer{
 }
 
 .credits{
+    color: var(--modalFont);
+}
+
+.git-links{
     color: var(--modalFont);
 }
 
